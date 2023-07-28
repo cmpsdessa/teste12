@@ -1,0 +1,1866 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/Al_0.js"></script>
+        <script src="data/Ca_1.js"></script>
+        <script src="data/H_2.js"></script>
+        <script src="data/K_3.js"></script>
+        <script src="data/Mg_4.js"></script>
+        <script src="data/pH_5.js"></script>
+        <script src="data/SALGADA_6.js"></script>
+        <script src="data/AUDE_7.js"></script>
+        <script src="data/SEDE_8.js"></script>
+        <script src="data/SALGADA_9.js"></script>
+        <script src="data/AUDE_10.js"></script>
+        <script src="data/SEDE_11.js"></script>
+        <script src="data/NmerodeFalhasdePalntio_12.js"></script>
+        <script src="data/NmerodeLinhasdePlantio_13.js"></script>
+        <script src="data/AnodePlantio_14.js"></script>
+        <script src="data/Variedades_15.js"></script>
+        <script src="data/reaha_16.js"></script>
+        <script src="data/TalhesProdutivos_17.js"></script>
+        <script src="data/LimiteStioIranita_18.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[-20.935646570187913,-41.96843001351487],[-20.926530459086862,-41.951383366394445]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        function pop_Al_0(feature, layer) {
+        }
+
+        function style_Al_0_0(feature) {
+            switch(String(feature.properties['al (cmolc)'])) {
+                case '0.0':
+                    return {
+                pane: 'pane_Al_0',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(250,250,250,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '0.1':
+                    return {
+                pane: 'pane_Al_0',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(128,128,128,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Al_0');
+        map.getPane('pane_Al_0').style.zIndex = 400;
+        map.getPane('pane_Al_0').style['mix-blend-mode'] = 'normal';
+        var layer_Al_0 = new L.geoJson(json_Al_0, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Al_0',
+            layerName: 'layer_Al_0',
+            pane: 'pane_Al_0',
+            onEachFeature: pop_Al_0,
+            style: style_Al_0_0,
+        });
+        bounds_group.addLayer(layer_Al_0);
+        map.addLayer(layer_Al_0);
+        function pop_Ca_1(feature, layer) {
+        }
+
+        function style_Ca_1_0(feature) {
+            switch(String(feature.properties['ca (cmolc)'])) {
+                case '2.4':
+                    return {
+                pane: 'pane_Ca_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,251,255,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.3':
+                    return {
+                pane: 'pane_Ca_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(175,209,231,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.4':
+                    return {
+                pane: 'pane_Ca_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(62,142,196,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.5':
+                    return {
+                pane: 'pane_Ca_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(8,48,107,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Ca_1');
+        map.getPane('pane_Ca_1').style.zIndex = 401;
+        map.getPane('pane_Ca_1').style['mix-blend-mode'] = 'normal';
+        var layer_Ca_1 = new L.geoJson(json_Ca_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Ca_1',
+            layerName: 'layer_Ca_1',
+            pane: 'pane_Ca_1',
+            onEachFeature: pop_Ca_1,
+            style: style_Ca_1_0,
+        });
+        bounds_group.addLayer(layer_Ca_1);
+        map.addLayer(layer_Ca_1);
+        function pop_H_2(feature, layer) {
+        }
+
+        function style_H_2_0(feature) {
+            switch(String(feature.properties['h+'])) {
+                case '2.2':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,251,253,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '2.4':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(242,240,247,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '2.5':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(228,227,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '2.6':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(209,209,230,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '2.9':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(186,186,218,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.0':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(163,159,203,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.1':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(140,136,191,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.2':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(117,103,175,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '3.3':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(99,67,156,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '5.5':
+                    return {
+                pane: 'pane_H_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(84,39,143,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_H_2');
+        map.getPane('pane_H_2').style.zIndex = 402;
+        map.getPane('pane_H_2').style['mix-blend-mode'] = 'normal';
+        var layer_H_2 = new L.geoJson(json_H_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_H_2',
+            layerName: 'layer_H_2',
+            pane: 'pane_H_2',
+            onEachFeature: pop_H_2,
+            style: style_H_2_0,
+        });
+        bounds_group.addLayer(layer_H_2);
+        map.addLayer(layer_H_2);
+        function pop_K_3(feature, layer) {
+        }
+
+        function style_K_3_0(feature) {
+            switch(String(feature.properties['k+'])) {
+                case '57.4':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(241,238,246,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '60.5':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(231,215,234,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '83.8':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(220,192,222,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '103.5':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(217,165,208,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '107.1':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(220,133,192,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '120.6':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(223,101,176,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '127.5':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(222,72,153,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '142.0':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(221,43,130,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '152.8':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(207,22,109,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '172.4':
+                    return {
+                pane: 'pane_K_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(180,11,88,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_K_3');
+        map.getPane('pane_K_3').style.zIndex = 403;
+        map.getPane('pane_K_3').style['mix-blend-mode'] = 'normal';
+        var layer_K_3 = new L.geoJson(json_K_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_K_3',
+            layerName: 'layer_K_3',
+            pane: 'pane_K_3',
+            onEachFeature: pop_K_3,
+            style: style_K_3_0,
+        });
+        bounds_group.addLayer(layer_K_3);
+        map.addLayer(layer_K_3);
+        function pop_Mg_4(feature, layer) {
+        }
+
+        function style_Mg_4_0(feature) {
+            switch(String(feature.properties['mg (cmolc)'])) {
+                case '1.2':
+                    return {
+                pane: 'pane_Mg_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(213,239,207,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '1.3':
+                    return {
+                pane: 'pane_Mg_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(158,215,152,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '1.4':
+                    return {
+                pane: 'pane_Mg_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(85,181,103,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '1.5':
+                    return {
+                pane: 'pane_Mg_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(29,134,65,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Mg_4');
+        map.getPane('pane_Mg_4').style.zIndex = 404;
+        map.getPane('pane_Mg_4').style['mix-blend-mode'] = 'normal';
+        var layer_Mg_4 = new L.geoJson(json_Mg_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Mg_4',
+            layerName: 'layer_Mg_4',
+            pane: 'pane_Mg_4',
+            onEachFeature: pop_Mg_4,
+            style: style_Mg_4_0,
+        });
+        bounds_group.addLayer(layer_Mg_4);
+        map.addLayer(layer_Mg_4);
+        function pop_pH_5(feature, layer) {
+        }
+
+        function style_pH_5_0(feature) {
+            switch(String(feature.properties['ph'])) {
+                case '5.4':
+                    return {
+                pane: 'pane_pH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103,0,13,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '6.0':
+                    return {
+                pane: 'pane_pH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(197,23,28,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '6.1':
+                    return {
+                pane: 'pane_pH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(244,77,56,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '6.2':
+                    return {
+                pane: 'pane_pH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,143,111,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '6.3':
+                    return {
+                pane: 'pane_pH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(253,204,184,1.0)',
+                interactive: true,
+            }
+                    break;
+                case '6.4':
+                    return {
+                pane: 'pane_pH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_pH_5');
+        map.getPane('pane_pH_5').style.zIndex = 405;
+        map.getPane('pane_pH_5').style['mix-blend-mode'] = 'normal';
+        var layer_pH_5 = new L.geoJson(json_pH_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_pH_5',
+            layerName: 'layer_pH_5',
+            pane: 'pane_pH_5',
+            onEachFeature: pop_pH_5,
+            style: style_pH_5_0,
+        });
+        bounds_group.addLayer(layer_pH_5);
+        map.addLayer(layer_pH_5);
+        function pop_SALGADA_6(feature, layer) {
+        }
+
+        function style_SALGADA_6_0() {
+            return {
+                pane: 'pane_SALGADA_6',
+                opacity: 1,
+                color: 'rgba(255,255,0,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_SALGADA_6');
+        map.getPane('pane_SALGADA_6').style.zIndex = 406;
+        map.getPane('pane_SALGADA_6').style['mix-blend-mode'] = 'normal';
+        var layer_SALGADA_6 = new L.geoJson(json_SALGADA_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SALGADA_6',
+            layerName: 'layer_SALGADA_6',
+            pane: 'pane_SALGADA_6',
+            onEachFeature: pop_SALGADA_6,
+            style: style_SALGADA_6_0,
+        });
+        bounds_group.addLayer(layer_SALGADA_6);
+        map.addLayer(layer_SALGADA_6);
+        function pop_AUDE_7(feature, layer) {
+        }
+
+        function style_AUDE_7_0() {
+            return {
+                pane: 'pane_AUDE_7',
+                opacity: 1,
+                color: 'rgba(255,255,3,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_AUDE_7');
+        map.getPane('pane_AUDE_7').style.zIndex = 407;
+        map.getPane('pane_AUDE_7').style['mix-blend-mode'] = 'normal';
+        var layer_AUDE_7 = new L.geoJson(json_AUDE_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_AUDE_7',
+            layerName: 'layer_AUDE_7',
+            pane: 'pane_AUDE_7',
+            onEachFeature: pop_AUDE_7,
+            style: style_AUDE_7_0,
+        });
+        bounds_group.addLayer(layer_AUDE_7);
+        map.addLayer(layer_AUDE_7);
+        function pop_SEDE_8(feature, layer) {
+        }
+
+        function style_SEDE_8_0() {
+            return {
+                pane: 'pane_SEDE_8',
+                opacity: 1,
+                color: 'rgba(255,255,2,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_SEDE_8');
+        map.getPane('pane_SEDE_8').style.zIndex = 408;
+        map.getPane('pane_SEDE_8').style['mix-blend-mode'] = 'normal';
+        var layer_SEDE_8 = new L.geoJson(json_SEDE_8, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SEDE_8',
+            layerName: 'layer_SEDE_8',
+            pane: 'pane_SEDE_8',
+            onEachFeature: pop_SEDE_8,
+            style: style_SEDE_8_0,
+        });
+        bounds_group.addLayer(layer_SEDE_8);
+        map.addLayer(layer_SEDE_8);
+        function pop_SALGADA_9(feature, layer) {
+        }
+
+        function style_SALGADA_9_0() {
+            return {
+                pane: 'pane_SALGADA_9',
+                opacity: 1,
+                color: 'rgba(227,26,28,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_SALGADA_9');
+        map.getPane('pane_SALGADA_9').style.zIndex = 409;
+        map.getPane('pane_SALGADA_9').style['mix-blend-mode'] = 'normal';
+        var layer_SALGADA_9 = new L.geoJson(json_SALGADA_9, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SALGADA_9',
+            layerName: 'layer_SALGADA_9',
+            pane: 'pane_SALGADA_9',
+            onEachFeature: pop_SALGADA_9,
+            style: style_SALGADA_9_0,
+        });
+        bounds_group.addLayer(layer_SALGADA_9);
+        map.addLayer(layer_SALGADA_9);
+        function pop_AUDE_10(feature, layer) {
+        }
+
+        function style_AUDE_10_0() {
+            return {
+                pane: 'pane_AUDE_10',
+                opacity: 1,
+                color: 'rgba(227,26,28,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_AUDE_10');
+        map.getPane('pane_AUDE_10').style.zIndex = 410;
+        map.getPane('pane_AUDE_10').style['mix-blend-mode'] = 'normal';
+        var layer_AUDE_10 = new L.geoJson(json_AUDE_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_AUDE_10',
+            layerName: 'layer_AUDE_10',
+            pane: 'pane_AUDE_10',
+            onEachFeature: pop_AUDE_10,
+            style: style_AUDE_10_0,
+        });
+        bounds_group.addLayer(layer_AUDE_10);
+        map.addLayer(layer_AUDE_10);
+        function pop_SEDE_11(feature, layer) {
+        }
+
+        function style_SEDE_11_0() {
+            return {
+                pane: 'pane_SEDE_11',
+                opacity: 1,
+                color: 'rgba(227,26,28,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_SEDE_11');
+        map.getPane('pane_SEDE_11').style.zIndex = 411;
+        map.getPane('pane_SEDE_11').style['mix-blend-mode'] = 'normal';
+        var layer_SEDE_11 = new L.geoJson(json_SEDE_11, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SEDE_11',
+            layerName: 'layer_SEDE_11',
+            pane: 'pane_SEDE_11',
+            onEachFeature: pop_SEDE_11,
+            style: style_SEDE_11_0,
+        });
+        bounds_group.addLayer(layer_SEDE_11);
+        map.addLayer(layer_SEDE_11);
+        function pop_NmerodeFalhasdePalntio_12(feature, layer) {
+        }
+
+        function style_NmerodeFalhasdePalntio_12_0(feature) {
+            switch(String(feature.properties['N Falhas'])) {
+                case '2':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(239,211,140,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '8':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(227,70,38,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '24':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(174,227,14,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '31':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(65,212,197,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '75':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(123,223,98,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '88':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(148,48,236,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '319':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(14,18,226,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '346':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(19,225,91,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '367':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(213,46,110,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '424':
+                    return {
+                pane: 'pane_NmerodeFalhasdePalntio_12',
+                opacity: 1,
+                color: 'rgba(54,135,202,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_NmerodeFalhasdePalntio_12');
+        map.getPane('pane_NmerodeFalhasdePalntio_12').style.zIndex = 412;
+        map.getPane('pane_NmerodeFalhasdePalntio_12').style['mix-blend-mode'] = 'normal';
+        var layer_NmerodeFalhasdePalntio_12 = new L.geoJson(json_NmerodeFalhasdePalntio_12, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_NmerodeFalhasdePalntio_12',
+            layerName: 'layer_NmerodeFalhasdePalntio_12',
+            pane: 'pane_NmerodeFalhasdePalntio_12',
+            onEachFeature: pop_NmerodeFalhasdePalntio_12,
+            style: style_NmerodeFalhasdePalntio_12_0,
+        });
+        bounds_group.addLayer(layer_NmerodeFalhasdePalntio_12);
+        map.addLayer(layer_NmerodeFalhasdePalntio_12);
+        function pop_NmerodeLinhasdePlantio_13(feature, layer) {
+        }
+
+        function style_NmerodeLinhasdePlantio_13_0(feature) {
+            switch(String(feature.properties['N Linhas'])) {
+                case '22':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(170,87,233,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '27':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(52,152,239,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '31':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(231,42,212,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '33':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(161,200,69,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '46':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(207,185,120,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '47':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(92,207,136,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '48':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(89,87,215,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '59':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(202,101,137,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '65':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(121,207,104,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '72':
+                    return {
+                pane: 'pane_NmerodeLinhasdePlantio_13',
+                opacity: 1,
+                color: 'rgba(218,76,44,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_NmerodeLinhasdePlantio_13');
+        map.getPane('pane_NmerodeLinhasdePlantio_13').style.zIndex = 413;
+        map.getPane('pane_NmerodeLinhasdePlantio_13').style['mix-blend-mode'] = 'normal';
+        var layer_NmerodeLinhasdePlantio_13 = new L.geoJson(json_NmerodeLinhasdePlantio_13, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_NmerodeLinhasdePlantio_13',
+            layerName: 'layer_NmerodeLinhasdePlantio_13',
+            pane: 'pane_NmerodeLinhasdePlantio_13',
+            onEachFeature: pop_NmerodeLinhasdePlantio_13,
+            style: style_NmerodeLinhasdePlantio_13_0,
+        });
+        bounds_group.addLayer(layer_NmerodeLinhasdePlantio_13);
+        map.addLayer(layer_NmerodeLinhasdePlantio_13);
+        function pop_AnodePlantio_14(feature, layer) {
+        }
+
+        function style_AnodePlantio_14_0(feature) {
+            switch(String(feature.properties['Ano de Pla'])) {
+                case '1995':
+                    return {
+                pane: 'pane_AnodePlantio_14',
+                opacity: 1,
+                color: 'rgba(74,16,219,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '2019':
+                    return {
+                pane: 'pane_AnodePlantio_14',
+                opacity: 1,
+                color: 'rgba(41,208,220,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '2019/2020':
+                    return {
+                pane: 'pane_AnodePlantio_14',
+                opacity: 1,
+                color: 'rgba(212,183,126,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '2020':
+                    return {
+                pane: 'pane_AnodePlantio_14',
+                opacity: 1,
+                color: 'rgba(126,210,113,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_AnodePlantio_14');
+        map.getPane('pane_AnodePlantio_14').style.zIndex = 414;
+        map.getPane('pane_AnodePlantio_14').style['mix-blend-mode'] = 'normal';
+        var layer_AnodePlantio_14 = new L.geoJson(json_AnodePlantio_14, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_AnodePlantio_14',
+            layerName: 'layer_AnodePlantio_14',
+            pane: 'pane_AnodePlantio_14',
+            onEachFeature: pop_AnodePlantio_14,
+            style: style_AnodePlantio_14_0,
+        });
+        bounds_group.addLayer(layer_AnodePlantio_14);
+        map.addLayer(layer_AnodePlantio_14);
+        function pop_Variedades_15(feature, layer) {
+        }
+
+        function style_Variedades_15_0(feature) {
+            switch(String(feature.properties['Variedade'])) {
+                case '785-15 Verm.':
+                    return {
+                pane: 'pane_Variedades_15',
+                opacity: 1,
+                color: 'rgba(226,58,46,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Arara':
+                    return {
+                pane: 'pane_Variedades_15',
+                opacity: 1,
+                color: 'rgba(94,200,101,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Arara e Japy':
+                    return {
+                pane: 'pane_Variedades_15',
+                opacity: 1,
+                color: 'rgba(51,210,221,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Catuai':
+                    return {
+                pane: 'pane_Variedades_15',
+                opacity: 1,
+                color: 'rgba(65,54,225,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Mundo Novo':
+                    return {
+                pane: 'pane_Variedades_15',
+                opacity: 1,
+                color: 'rgba(229,16,211,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Variedades_15');
+        map.getPane('pane_Variedades_15').style.zIndex = 415;
+        map.getPane('pane_Variedades_15').style['mix-blend-mode'] = 'normal';
+        var layer_Variedades_15 = new L.geoJson(json_Variedades_15, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Variedades_15',
+            layerName: 'layer_Variedades_15',
+            pane: 'pane_Variedades_15',
+            onEachFeature: pop_Variedades_15,
+            style: style_Variedades_15_0,
+        });
+        bounds_group.addLayer(layer_Variedades_15);
+        map.addLayer(layer_Variedades_15);
+        function pop_reaha_16(feature, layer) {
+        }
+
+        function style_reaha_16_0(feature) {
+            switch(String(feature.properties['Área (ha)'])) {
+                case '0.28':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(155,211,65,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '0.286':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(142,20,207,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '0.407':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(236,43,94,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '0.607':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(46,230,33,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '0.832':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(202,77,177,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '0.84':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(23,218,114,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '0.899':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(206,184,71,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '1.032':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(42,237,240,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '1.11':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(64,47,215,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '1.867':
+                    return {
+                pane: 'pane_reaha_16',
+                opacity: 1,
+                color: 'rgba(217,100,54,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_reaha_16');
+        map.getPane('pane_reaha_16').style.zIndex = 416;
+        map.getPane('pane_reaha_16').style['mix-blend-mode'] = 'normal';
+        var layer_reaha_16 = new L.geoJson(json_reaha_16, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_reaha_16',
+            layerName: 'layer_reaha_16',
+            pane: 'pane_reaha_16',
+            onEachFeature: pop_reaha_16,
+            style: style_reaha_16_0,
+        });
+        bounds_group.addLayer(layer_reaha_16);
+        map.addLayer(layer_reaha_16);
+        function pop_TalhesProdutivos_17(feature, layer) {
+        }
+
+        function style_TalhesProdutivos_17_0(feature) {
+            switch(String(feature.properties['Talhão'])) {
+                case 'T01':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(87,211,190,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T02':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(106,231,64,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T03':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(208,236,94,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T04':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(218,74,136,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T05':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(132,65,208,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T07':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(33,220,89,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T08':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(226,68,223,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T09':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(210,146,28,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T10':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(40,140,203,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'T11':
+                    return {
+                pane: 'pane_TalhesProdutivos_17',
+                opacity: 1,
+                color: 'rgba(22,35,220,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 3.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_TalhesProdutivos_17');
+        map.getPane('pane_TalhesProdutivos_17').style.zIndex = 417;
+        map.getPane('pane_TalhesProdutivos_17').style['mix-blend-mode'] = 'normal';
+        var layer_TalhesProdutivos_17 = new L.geoJson(json_TalhesProdutivos_17, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_TalhesProdutivos_17',
+            layerName: 'layer_TalhesProdutivos_17',
+            pane: 'pane_TalhesProdutivos_17',
+            onEachFeature: pop_TalhesProdutivos_17,
+            style: style_TalhesProdutivos_17_0,
+        });
+        bounds_group.addLayer(layer_TalhesProdutivos_17);
+        map.addLayer(layer_TalhesProdutivos_17);
+        function pop_LimiteStioIranita_18(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Name</th>\
+                        <td>' + (feature.properties['Name'] !== null ? autolinker.link(feature.properties['Name'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['description'] !== null ? autolinker.link(feature.properties['description'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['timestamp'] !== null ? autolinker.link(feature.properties['timestamp'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['begin'] !== null ? autolinker.link(feature.properties['begin'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['end'] !== null ? autolinker.link(feature.properties['end'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['altitudeMode'] !== null ? autolinker.link(feature.properties['altitudeMode'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tessellate'] !== null ? autolinker.link(feature.properties['tessellate'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['extrude'] !== null ? autolinker.link(feature.properties['extrude'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['visibility'] !== null ? autolinker.link(feature.properties['visibility'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['drawOrder'] !== null ? autolinker.link(feature.properties['drawOrder'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['icon'] !== null ? autolinker.link(feature.properties['icon'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Area_ha</th>\
+                        <td>' + (feature.properties['Area_ha'] !== null ? autolinker.link(feature.properties['Area_ha'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_LimiteStioIranita_18_0() {
+            return {
+                pane: 'pane_LimiteStioIranita_18',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 4.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(240,0,4,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_LimiteStioIranita_18');
+        map.getPane('pane_LimiteStioIranita_18').style.zIndex = 418;
+        map.getPane('pane_LimiteStioIranita_18').style['mix-blend-mode'] = 'normal';
+        var layer_LimiteStioIranita_18 = new L.geoJson(json_LimiteStioIranita_18, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_LimiteStioIranita_18',
+            layerName: 'layer_LimiteStioIranita_18',
+            pane: 'pane_LimiteStioIranita_18',
+            onEachFeature: pop_LimiteStioIranita_18,
+            style: style_LimiteStioIranita_18_0,
+        });
+        bounds_group.addLayer(layer_LimiteStioIranita_18);
+        map.addLayer(layer_LimiteStioIranita_18);
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: true,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/LimiteStioIranita_18.png" /> Limite Sítio Iranita': layer_LimiteStioIranita_18,'Talhões Produtivos<br /><table><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T010.png" /></td><td>T01</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T021.png" /></td><td>T02</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T032.png" /></td><td>T03</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T043.png" /></td><td>T04</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T054.png" /></td><td>T05</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T075.png" /></td><td>T07</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T086.png" /></td><td>T08</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T097.png" /></td><td>T09</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T108.png" /></td><td>T10</td></tr><tr><td style="text-align: center;"><img src="legend/TalhesProdutivos_17_T119.png" /></td><td>T11</td></tr></table>': layer_TalhesProdutivos_17,'Área ha<br /><table><tr><td style="text-align: center;"><img src="legend/reaha_16_0280.png" /></td><td>0,28</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_02861.png" /></td><td>0,286</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_04072.png" /></td><td>0,407</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_06073.png" /></td><td>0,607</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_08324.png" /></td><td>0,832</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_0845.png" /></td><td>0,84</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_08996.png" /></td><td>0,899</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_10327.png" /></td><td>1,032</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_11108.png" /></td><td>1,110</td></tr><tr><td style="text-align: center;"><img src="legend/reaha_16_18679.png" /></td><td>1,867</td></tr></table>': layer_reaha_16,'Variedades<br /><table><tr><td style="text-align: center;"><img src="legend/Variedades_15_78515Verm0.png" /></td><td>785-15 Verm.</td></tr><tr><td style="text-align: center;"><img src="legend/Variedades_15_Arara1.png" /></td><td>Arara</td></tr><tr><td style="text-align: center;"><img src="legend/Variedades_15_AraraeJapy2.png" /></td><td>Arara e Japy</td></tr><tr><td style="text-align: center;"><img src="legend/Variedades_15_Catuai3.png" /></td><td>Catuai</td></tr><tr><td style="text-align: center;"><img src="legend/Variedades_15_MundoNovo4.png" /></td><td>Mundo Novo</td></tr></table>': layer_Variedades_15,'Ano de Plantio<br /><table><tr><td style="text-align: center;"><img src="legend/AnodePlantio_14_19950.png" /></td><td>1995</td></tr><tr><td style="text-align: center;"><img src="legend/AnodePlantio_14_20191.png" /></td><td>2019</td></tr><tr><td style="text-align: center;"><img src="legend/AnodePlantio_14_201920202.png" /></td><td>2019/2020</td></tr><tr><td style="text-align: center;"><img src="legend/AnodePlantio_14_20203.png" /></td><td>2020</td></tr></table>': layer_AnodePlantio_14,'Número de Linhas de Plantio<br /><table><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_220.png" /></td><td>22</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_271.png" /></td><td>27</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_312.png" /></td><td>31</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_333.png" /></td><td>33</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_464.png" /></td><td>46</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_475.png" /></td><td>47</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_486.png" /></td><td>48</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_597.png" /></td><td>59</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_658.png" /></td><td>65</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeLinhasdePlantio_13_729.png" /></td><td>72</td></tr></table>': layer_NmerodeLinhasdePlantio_13,'Número de Falhas de Palntio<br /><table><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_20.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_81.png" /></td><td>8</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_242.png" /></td><td>24</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_313.png" /></td><td>31</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_754.png" /></td><td>75</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_885.png" /></td><td>88</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_3196.png" /></td><td>319</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_3467.png" /></td><td>346</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_3678.png" /></td><td>367</td></tr><tr><td style="text-align: center;"><img src="legend/NmerodeFalhasdePalntio_12_4249.png" /></td><td>424</td></tr></table>': layer_NmerodeFalhasdePalntio_12,'<img src="legend/SEDE_11.png" /> SEDE': layer_SEDE_11,'<img src="legend/AUDE_10.png" /> AÇUDE': layer_AUDE_10,'<img src="legend/SALGADA_9.png" /> SALGADA': layer_SALGADA_9,'<img src="legend/SEDE_8.png" /> SEDE': layer_SEDE_8,'<img src="legend/AUDE_7.png" /> AÇUDE': layer_AUDE_7,'<img src="legend/SALGADA_6.png" /> SALGADA': layer_SALGADA_6,'pH<br /><table><tr><td style="text-align: center;"><img src="legend/pH_5_540.png" /></td><td>5,4</td></tr><tr><td style="text-align: center;"><img src="legend/pH_5_61.png" /></td><td>6</td></tr><tr><td style="text-align: center;"><img src="legend/pH_5_612.png" /></td><td>6,1</td></tr><tr><td style="text-align: center;"><img src="legend/pH_5_623.png" /></td><td>6,2</td></tr><tr><td style="text-align: center;"><img src="legend/pH_5_634.png" /></td><td>6,3</td></tr><tr><td style="text-align: center;"><img src="legend/pH_5_645.png" /></td><td>6,4</td></tr></table>': layer_pH_5,'Mg<br /><table><tr><td style="text-align: center;"><img src="legend/Mg_4_120.png" /></td><td>1,2</td></tr><tr><td style="text-align: center;"><img src="legend/Mg_4_131.png" /></td><td>1,3</td></tr><tr><td style="text-align: center;"><img src="legend/Mg_4_142.png" /></td><td>1,4</td></tr><tr><td style="text-align: center;"><img src="legend/Mg_4_153.png" /></td><td>1,5</td></tr></table>': layer_Mg_4,'K+<br /><table><tr><td style="text-align: center;"><img src="legend/K_3_5740.png" /></td><td>57,4</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_6051.png" /></td><td>60,5</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_8382.png" /></td><td>83,8</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_10353.png" /></td><td>103,5</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_10714.png" /></td><td>107,1</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_12065.png" /></td><td>120,6</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_12756.png" /></td><td>127,5</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_1427.png" /></td><td>142</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_15288.png" /></td><td>152,8</td></tr><tr><td style="text-align: center;"><img src="legend/K_3_17249.png" /></td><td>172,4</td></tr></table>': layer_K_3,'H+<br /><table><tr><td style="text-align: center;"><img src="legend/H_2_220.png" /></td><td>2,2</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_241.png" /></td><td>2,4</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_252.png" /></td><td>2,5</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_263.png" /></td><td>2,6</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_294.png" /></td><td>2,9</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_35.png" /></td><td>3</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_316.png" /></td><td>3,1</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_327.png" /></td><td>3,2</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_338.png" /></td><td>3,3</td></tr><tr><td style="text-align: center;"><img src="legend/H_2_559.png" /></td><td>5,5</td></tr></table>': layer_H_2,'Ca<br /><table><tr><td style="text-align: center;"><img src="legend/Ca_1_240.png" /></td><td>2,4</td></tr><tr><td style="text-align: center;"><img src="legend/Ca_1_331.png" /></td><td>3,3</td></tr><tr><td style="text-align: center;"><img src="legend/Ca_1_342.png" /></td><td>3,4</td></tr><tr><td style="text-align: center;"><img src="legend/Ca_1_353.png" /></td><td>3,5</td></tr></table>': layer_Ca_1,'Al<br /><table><tr><td style="text-align: center;"><img src="legend/Al_0_00.png" /></td><td>0</td></tr><tr><td style="text-align: center;"><img src="legend/Al_0_011.png" /></td><td>0,1</td></tr></table>': layer_Al_0,}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_NmerodeFalhasdePalntio_12.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['N Falhas'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['N Falhas']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_NmerodeFalhasdePalntio_12'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_NmerodeLinhasdePlantio_13.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['N Linhas'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['N Linhas']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_NmerodeLinhasdePlantio_13'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_AnodePlantio_14.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Ano de Pla'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Ano de Pla']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_AnodePlantio_14'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_Variedades_15.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Variedade'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Variedade']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Variedades_15'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_reaha_16.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Área (ha)'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Área (ha)']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_reaha_16'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_TalhesProdutivos_17.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Talhão'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Arial\', sans-serif;">' + layer.feature.properties['Talhão']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_TalhesProdutivos_17'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_NmerodeFalhasdePalntio_12,layer_NmerodeLinhasdePlantio_13,layer_AnodePlantio_14,layer_Variedades_15,layer_reaha_16,layer_TalhesProdutivos_17]);
+        map.on("zoomend", function(){
+            resetLabels([layer_NmerodeFalhasdePalntio_12,layer_NmerodeLinhasdePlantio_13,layer_AnodePlantio_14,layer_Variedades_15,layer_reaha_16,layer_TalhesProdutivos_17]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_NmerodeFalhasdePalntio_12,layer_NmerodeLinhasdePlantio_13,layer_AnodePlantio_14,layer_Variedades_15,layer_reaha_16,layer_TalhesProdutivos_17]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_NmerodeFalhasdePalntio_12,layer_NmerodeLinhasdePlantio_13,layer_AnodePlantio_14,layer_Variedades_15,layer_reaha_16,layer_TalhesProdutivos_17]);
+        });
+        </script>
+    </body>
+</html>
